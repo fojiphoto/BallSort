@@ -47,7 +47,7 @@ public class BallSkinInShop : MonoBehaviour
         {
             //equip
             BallSkinManager.Instance.EquipSkinBall(this);
-            AudioController.Instance.PlaySound(AudioController.Instance.clickBtn);
+            BallSortColorAudioController.Instance.PlaySound(BallSortColorAudioController.Instance.clickBtn);
 
             //itemSelected.SetActive(true);
 
@@ -80,17 +80,20 @@ public class BallSkinInShop : MonoBehaviour
             Debug.Log("khong co internet");
             return;
         }
-        AdManager.instance.ShowReward(() =>
-        {
-            AudioController.Instance.PlaySound(AudioController.Instance.clickBtn);
-            OnButtonPress();
+        //Nadeem Ads BallSort
+        //AdManager.instance.ShowReward(() =>
+        //{
+        //    AudioController.Instance.PlaySound(AudioController.Instance.clickBtn);
+        //    OnButtonPress();
 
 
-        }, () =>
-        {
+        //}, () =>
+        //{
 
 
-        }, "YourPlacementID");
+        //}, "YourPlacementID");
+
+        OnButtonPress();
     }
 
     public void IsSkinUnlocked()

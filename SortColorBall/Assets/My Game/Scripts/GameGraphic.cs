@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [System.Serializable]
-public class Skin
+public class BallSortSkin
 {
     public string nameSkin;
     public Sprite[] sprites;
@@ -13,7 +13,7 @@ public class Skin
 public class GameGraphic : MonoBehaviour
 {
     public static GameGraphic Instance;
-    private Game game;
+    private BallSortColorGame game;
     private BallGraphic previewBall;
     public bool isSwitchingBall = false;
     private bool canClick = false;
@@ -41,7 +41,7 @@ public class GameGraphic : MonoBehaviour
 
     public int idSkin;
 
-    public List<Skin> skins;
+    public List<BallSortSkin> skins;
 
 
     public Sprite[] Skin()
@@ -56,7 +56,7 @@ public class GameGraphic : MonoBehaviour
     {
         Instance = this;
         gameLevelReader = GetComponent<GameLevelReader>();
-        AdManager.instance.ShowBanner();
+       // AdManager.instance.ShowBanner();
         idSkin = PlayerPrefs.GetInt("ballskinPref", 0);
 
 
@@ -68,7 +68,7 @@ public class GameGraphic : MonoBehaviour
         Application.targetFrameRate = 60;
 
         selectedBottleIndex = -1;
-        game = FindAnyObjectByType<Game>();
+        game = FindAnyObjectByType<BallSortColorGame>();
         StartCoroutine(EnableClickAfterDelay(3.5f));
         previewBall = Instantiate(prefabBallGraphic);
         SetUndoUiState(false);
@@ -96,7 +96,7 @@ public class GameGraphic : MonoBehaviour
         supCanvasGroup.interactable = isInteractable;
         supCanvasGroup.blocksRaycasts = isInteractable;
     }
-    private Queue<Vector3> GetCommandPath(Game.SwtichBallCommand command)
+    private Queue<Vector3> GetCommandPath(BallSortColorGame.SwtichBallCommand command)
     {
         Queue<Vector3> queueMovement = new Queue<Vector3>();
 
@@ -147,11 +147,11 @@ public class GameGraphic : MonoBehaviour
             bg.transform.parent = gameLevelReader.curLevel.transform;
             bottleGraphics.Add(bg);
 
-            Game.Bottle newBottle = new Game.Bottle();
-            newBottle.balls = new List<Game.Ball>();  // Tạo danh sách bóng rỗng
+            BallSortColorGame.Bottle newBottle = new BallSortColorGame.Bottle();
+            newBottle.balls = new List<BallSortColorGame.Ball>();  // Tạo danh sách bóng rỗng
             game.bottles.Add(newBottle);
             List<int> ballTypes = new List<int>();
-            AudioController.Instance.PlaySound(AudioController.Instance.clickBtn);
+            BallSortColorAudioController.Instance.PlaySound(BallSortColorAudioController.Instance.clickBtn);
             bg.SetGraphic(ballTypes.ToArray());
 
 
@@ -173,17 +173,20 @@ public class GameGraphic : MonoBehaviour
             Debug.Log("khong co internet");
             return;
         }
-        AdManager.instance.ShowReward(() =>
-        {
-            //AudioController.Instance.PlaySound(AudioController.Instance.clickBtn);
-            AddNewBottle();
-            //ResetTimer();
 
-        }, () =>
-        {
-            //ResetTimer();
+        //AdManager.instance.ShowReward(() =>
+        //{
+        //    //AudioController.Instance.PlaySound(AudioController.Instance.clickBtn);
+        //    AddNewBottle();
+        //    //ResetTimer();
 
-        }, "YourPlacementID");
+        //}, () =>
+        //{
+        //    //ResetTimer();
+
+        //}, "YourPlacementID");
+        //Nadeem Ads BallSort
+        AddNewBottle();
     }
 
     private void PositionBottles()
@@ -224,13 +227,13 @@ public class GameGraphic : MonoBehaviour
             }
         }
     }
-    public void CreateBottleGraphic(List<Game.Bottle> bottles)
+    public void CreateBottleGraphic(List<BallSortColorGame.Bottle> bottles)
     {
         isSwitchingBall = false;
         ClearBottleGraphics();
         GameObject selectedPrefab = SkinManager.equippedPrefab; // This holds the currently selected skin prefab
 
-        foreach (Game.Bottle b in bottles)
+        foreach (BallSortColorGame.Bottle b in bottles)
         {
             BottleGraphic bg = Instantiate(selectedPrefab).GetComponent<BottleGraphic>();
             bg.transform.parent = gameLevelReader.curLevel.transform;
@@ -287,11 +290,11 @@ public class GameGraphic : MonoBehaviour
 
     }
 
-    public void RefreshBottle(List<Game.Bottle> bottles)
+    public void RefreshBottle(List<BallSortColorGame.Bottle> bottles)
     {
         for (int i = 0; i < bottles.Count; i++)
         {
-            Game.Bottle gb = bottles[i];
+            BallSortColorGame.Bottle gb = bottles[i];
             BottleGraphic bottleGraphic = bottleGraphics[i];
 
             List<int> ballTypes = new List<int>();
@@ -333,12 +336,12 @@ public class GameGraphic : MonoBehaviour
                 //SetUndoUiState(false);
                 if (DataManager.Instance.GetLevel() == 1)
                 {
-                    UIManager.Instance.ShowMoveGuide();
+                    BallSortColorUIManager.Instance.ShowMoveGuide();
 
                 }
                 else
                 {
-                    UIManager.Instance.guideMoveBall.SetActive(false);
+                    BallSortColorUIManager.Instance.guideMoveBall.SetActive(false);
                 }
 
                 // Đặt cờ về false vì chưa có di chuyển nào
@@ -363,8 +366,8 @@ public class GameGraphic : MonoBehaviour
             else
             {
                 // Kiểm tra xem bóng ở bottle đích có cùng loại với bóng đang chọn không
-                Game.Bottle selectedBottle = game.bottles[selectedBottleIndex];
-                Game.Bottle targetBottle = game.bottles[bottleIndex];
+                BallSortColorGame.Bottle selectedBottle = game.bottles[selectedBottleIndex];
+                BallSortColorGame.Bottle targetBottle = game.bottles[bottleIndex];
 
                 if (targetBottle.balls.Count > 0 && targetBottle.balls[targetBottle.balls.Count - 1].type != selectedBottle.balls[selectedBottle.balls.Count - 1].type)
                 {
@@ -403,7 +406,7 @@ public class GameGraphic : MonoBehaviour
         }
     }
 
-    private IEnumerator SwitchBall(Game.SwtichBallCommand command, Queue<Vector3> movement)
+    private IEnumerator SwitchBall(BallSortColorGame.SwtichBallCommand command, Queue<Vector3> movement)
     {
         // tat graphic o vi tri from.
         //sau do tao 1 ball o vi tri from co cung type
@@ -463,8 +466,8 @@ public class GameGraphic : MonoBehaviour
     private IEnumerator SwtichBallCoroutine(int fromBottleIndex, int toBottleIndex)
     {
         isSwitchingBall = true;
-        List<Game.SwtichBallCommand> commands = game.CheckSwitchBall(fromBottleIndex, toBottleIndex);
-        List<Game.Ball> ballList = game.bottles[fromBottleIndex].balls;
+        List<BallSortColorGame.SwtichBallCommand> commands = game.CheckSwitchBall(fromBottleIndex, toBottleIndex);
+        List<BallSortColorGame.Ball> ballList = game.bottles[fromBottleIndex].balls;
 
         if (commands.Count == 0)
         {
@@ -472,7 +475,7 @@ public class GameGraphic : MonoBehaviour
 
             yield return StartCoroutine(MoveBallDown(selectedBottleIndex));
 
-            Game.Ball b = ballList[ballList.Count - 1];
+            BallSortColorGame.Ball b = ballList[ballList.Count - 1];
             bottleGraphics[fromBottleIndex].SetGraphic(ballList.Count - 1, b.type);
             isSwitchingBall = false;
 
@@ -486,7 +489,7 @@ public class GameGraphic : MonoBehaviour
 
             for (int i = 0; i < commands.Count; i++)
             {
-                Game.SwtichBallCommand command = commands[i];
+                BallSortColorGame.SwtichBallCommand command = commands[i];
                 Queue<Vector3> moveQueue = GetCommandPath(command);
 
                 if (i == 0)
@@ -513,14 +516,14 @@ public class GameGraphic : MonoBehaviour
                
                 AudioController.Instance.PlaySound(AudioController.Instance.completeTube);
             }*/
-            AudioController.Instance.PlaySound(AudioController.Instance.ballDown);
+            BallSortColorAudioController.Instance.PlaySound(BallSortColorAudioController.Instance.ballDown);
 
 
             // Kiểm tra nếu người chơi chiến thắng
             if (game.CheckWin())
             {
 
-                StartCoroutine(UIManager.Instance.ShowWin());
+                StartCoroutine(BallSortColorUIManager.Instance.ShowWin());
                 supBottleButton.interactable = true;
                 // Thêm logic dừng game và thông báo chiến thắng
                 // Ví dụ: Có thể hiện UI chiến thắng hoặc tắt các hành động chuyển bóng tiếp theo
@@ -538,7 +541,7 @@ public class GameGraphic : MonoBehaviour
     private IEnumerator MoveBallDown(int bottleIndex)
     {
         isSwitchingBall = true;
-        List<Game.Ball> ballList = game.bottles[bottleIndex].balls;
+        List<BallSortColorGame.Ball> ballList = game.bottles[bottleIndex].balls;
         /*if (ballList.Count == 0) // Kiểm tra nếu không có bóng nào để di chuyển
         {
             isSwitchingBall = false;
@@ -578,11 +581,11 @@ public class GameGraphic : MonoBehaviour
 
 
 
-        Game.Ball b = ballList[ballList.Count - 1];
+        BallSortColorGame.Ball b = ballList[ballList.Count - 1];
 
         bottleGraphics[bottleIndex].SetGraphic(ballList.Count - 1, b.type);
 
-        AudioController.Instance.PlaySound(AudioController.Instance.ballDown);
+        BallSortColorAudioController.Instance.PlaySound(BallSortColorAudioController.Instance.ballDown);
         Instantiate(effectBallDown, downPosition + new Vector3(0f, -0.2f, 0f), Quaternion.identity);
         isSwitchingBall = false;
 
@@ -593,14 +596,14 @@ public class GameGraphic : MonoBehaviour
         isSwitchingBall = true;
 
         Vector3 upPosition = bottleGraphics[bottleIndex].GetBottleUpPosition();
-        List<Game.Ball> ballList = game.bottles[bottleIndex].balls;
+        List<BallSortColorGame.Ball> ballList = game.bottles[bottleIndex].balls;
         if (ballList.Count == 0) // Kiểm tra nếu không có bóng nào để di chuyển
         {
             isSwitchingBall = false;
             yield break;
         }
         //lay qua bong cao nhat
-        Game.Ball b = ballList[ballList.Count - 1];
+        BallSortColorGame.Ball b = ballList[ballList.Count - 1];
         Vector3 ballPosition = bottleGraphics[bottleIndex].GetBallPosition(ballList.Count - 1);
 
         bottleGraphics[bottleIndex].SetGraphicNone(ballList.Count - 1);
@@ -640,7 +643,7 @@ public class GameGraphic : MonoBehaviour
 
     private void CheckBottleForLessThanFourBalls(int bottleIndex)
     {
-        Game.Bottle bottle = game.bottles[bottleIndex];
+        BallSortColorGame.Bottle bottle = game.bottles[bottleIndex];
 
         // Đảm bảo chai có ít nhất 4 bóng
         if (bottle.balls.Count >= 4)
@@ -688,7 +691,7 @@ public class GameGraphic : MonoBehaviour
             if (!isMoving)
             {
                 MoveCommand lastMove = moveHistory.Pop();
-                AudioController.Instance.PlaySound(AudioController.Instance.clickBtn);
+                BallSortColorAudioController.Instance.PlaySound(BallSortColorAudioController.Instance.clickBtn);
                 // Reverse the move
                 StartCoroutine(UndoMoveCoroutine(lastMove));
             }
@@ -708,7 +711,7 @@ public class GameGraphic : MonoBehaviour
 
             freeUndoCount--;
             UndoLastMove();
-            UIManager.Instance.TurnAds(true);
+            BallSortColorUIManager.Instance.TurnAds(true);
 
         }
         else
@@ -719,17 +722,20 @@ public class GameGraphic : MonoBehaviour
                 Debug.Log("showInternet");
                 return;
             }
-            AdManager.instance.ShowReward(() =>
-            {
+            //Nadeem Ads BallSort
+            //AdManager.instance.ShowReward(() =>
+            //{
 
-                UndoLastMove();
-                //ResetTimer();
+            //    UndoLastMove();
+            //    //ResetTimer();
 
-            }, () =>
-            {
-                //ResetTimer();
+            //}, () =>
+            //{
+            //    //ResetTimer();
 
-            }, "YourPlacementID");
+            //}, "YourPlacementID");
+
+            UndoLastMove();
         }
 
     }
@@ -747,14 +753,14 @@ public class GameGraphic : MonoBehaviour
         BottleGraphic toBottleGraphic = bottleGraphics[moveCommand.toBottleIndex];
 
         // Lấy dữ liệu chai và quả bóng
-        Game.Bottle fromBottle = game.bottles[moveCommand.fromBottleIndex];
-        Game.Bottle toBottle = game.bottles[moveCommand.toBottleIndex];
+        BallSortColorGame.Bottle fromBottle = game.bottles[moveCommand.fromBottleIndex];
+        BallSortColorGame.Bottle toBottle = game.bottles[moveCommand.toBottleIndex];
 
 
 
         // Loại bỏ quả bóng khỏi chai đích và thêm nó trở lại chai nguồn
         toBottle.balls.RemoveAt(toBottle.balls.Count - 1);
-        fromBottle.balls.Add(new Game.Ball { type = moveCommand.ballType });
+        fromBottle.balls.Add(new BallSortColorGame.Ball { type = moveCommand.ballType });
 
         // Ẩn đồ họa chai tạm thời trước khi di chuyển quả bóng
         toBottleGraphic.SetGraphicNone(toBottle.balls.Count);
@@ -797,7 +803,7 @@ public class GameGraphic : MonoBehaviour
         Vector3 effectPosition = fromBottleGraphic.GetBallPosition(fromBottle.balls.Count - 1);
         Instantiate(effectBallDown, effectPosition + new Vector3(0f, -0.2f, 0f), Quaternion.identity);
 
-        AudioController.Instance.PlaySound(AudioController.Instance.ballDown);
+        BallSortColorAudioController.Instance.PlaySound(BallSortColorAudioController.Instance.ballDown);
 
         // Đánh dấu là không còn di chuyển
         isMoving = false;

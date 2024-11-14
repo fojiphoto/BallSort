@@ -34,14 +34,15 @@ public class UIMenu : MonoBehaviour
     private void Start()
     {
         UpdateLevelText(DataManager.Instance.GetLevel());
-        AdManager.instance.ShowBanner();
+        //Nadeem Ads BallSort
+        // AdManager.instance.ShowBanner();
         shopPanel.SetActive(false);
 
     }
 
     public void ShowSettingPopup()
     {
-        AudioController.Instance.PlaySound(AudioController.Instance.openPopup);
+        BallSortColorAudioController.Instance.PlaySound(BallSortColorAudioController.Instance.openPopup);
         settingPanel.SetActive(true);
         board.SetActive(true);
 
@@ -72,7 +73,7 @@ public class UIMenu : MonoBehaviour
 
     public void PlayGame()
     {
-        AudioController.Instance.PlaySound(AudioController.Instance.clickBtn);
+        BallSortColorAudioController.Instance.PlaySound(BallSortColorAudioController.Instance.clickBtn);
 
         SceneManager.LoadScene("GamePlay");
     }
@@ -80,7 +81,7 @@ public class UIMenu : MonoBehaviour
     public void CloseShop()
     {
         
-        AudioController.Instance.PlaySound(AudioController.Instance.clickBtn);
+        BallSortColorAudioController.Instance.PlaySound(BallSortColorAudioController.Instance.clickBtn);
         shopPanel.transform.DOMove(new Vector3(0f, 10f, 0f), 1f).SetEase(Ease.InBack).OnComplete(() =>
         {
             // Deactivate the board and the game object after the animation completes
@@ -97,7 +98,7 @@ public class UIMenu : MonoBehaviour
         settingBtn.SetActive(false);
         shopBtn.SetActive(false);
         StartCoroutine("ItemAnimation");
-        AudioController.Instance.PlaySound(AudioController.Instance.clickBtn);
+        BallSortColorAudioController.Instance.PlaySound(BallSortColorAudioController.Instance.clickBtn);
 
     }
 
@@ -110,7 +111,7 @@ public class UIMenu : MonoBehaviour
         foreach (var item in items)
         {
             item.transform.DOScale(1f, 0.75f).SetEase(Ease.OutBounce);
-            AudioController.Instance.PlaySound(AudioController.Instance.popItem);
+            BallSortColorAudioController.Instance.PlaySound(BallSortColorAudioController.Instance.popItem);
             yield return new WaitForSeconds(0.25f);
         }
     }

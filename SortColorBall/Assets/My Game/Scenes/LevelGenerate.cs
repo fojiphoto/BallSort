@@ -14,7 +14,7 @@ public class LevelGenerate : MonoBehaviour
     public BottleGenerate bottle;
     public BottleGenerate bottleEmpty;
     public List<Sprite> sprites = new();
-    public Game game;
+    public BallSortColorGame game;
     public Transform parent;
     public Vector2 spacing = new Vector2(0.2f, 0.2f); // Khoảng cách giữa các điểm ma trận
 

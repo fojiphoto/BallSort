@@ -7,7 +7,7 @@ public class UIHome : MonoBehaviour
     
     public void Replay()
     {
-        AudioController.Instance.PlaySound(AudioController.Instance.clickBtn);
+        BallSortColorAudioController.Instance.PlaySound(BallSortColorAudioController.Instance.clickBtn);
 
         SceneManager.LoadScene("GamePlay");
 
@@ -15,7 +15,7 @@ public class UIHome : MonoBehaviour
 
     public void Back()
     {
-        AudioController.Instance.PlaySound(AudioController.Instance.clickBtn);
+        BallSortColorAudioController.Instance.PlaySound(BallSortColorAudioController.Instance.clickBtn);
 
         SceneManager.LoadScene("Menu");
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameLevelReader : MonoBehaviour
 {
     public TextAsset levels;
-    public Game game;
+    public BallSortColorGame game;
     public GameObject curLevel;
     
 
@@ -22,8 +22,8 @@ public class GameLevelReader : MonoBehaviour
 
     private IEnumerator LoadTextFromResourcesAsync(int indexLevel)
     {
-        Game.instance.levelPlaying = indexLevel;
-        string fileName = "Levels/Level" + indexLevel;
+        BallSortColorGame.instance.levelPlaying = indexLevel;
+        string fileName = "Levelsss/Level" + indexLevel;
         ResourceRequest request = Resources.LoadAsync<TextAsset>(fileName);
 
         yield return request;
