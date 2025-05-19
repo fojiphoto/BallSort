@@ -916,7 +916,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1498804398}
-  - component: {fileID: 1498804397}
   - component: {fileID: 1498804399}
   m_Layer: 0
   m_Name: AdsManager
@@ -925,27 +924,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1498804397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1498804396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be10a134cb8db1f4992bcd0206b69d27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  adTest: 0
-  Banner_ID: ca-app-pub-1866944813898601/2133413828
-  Banner_ID_IOS: 
-  Inter_ID: ca-app-pub-1866944813898601/5286463843
-  Inter_ID_IOS: 
-  Reward_ID: ca-app-pub-1866944813898601/7421672599
-  Reward_ID_IOS: 
-  Open_ID: ca-app-pub-1866944813898601/7765014451
-  Open_ID_IOS: 
 --- !u!4 &1498804398
 Transform:
   m_ObjectHideFlags: 0
@@ -970,10 +948,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1498804396}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee8cfc98cc5f4d7468149f58e48f0cc7, type: 3}
+  m_Script: {fileID: 11500000, guid: 963c238440881a347b971e9a6a5b5b6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultTimeInter: 0
+  InterstitialAdUnitIdGeneric: a961f53fd249a64d
+  RewardedAdUnitIdGeneric: a070906f7aa9333e
+  BannerAdUnitId: 782ebbb1cc12d23d
+  AppOpenAdUnitId: 
+  RecID: d1064eb9f74fb805
+  isBannerShowing: 0
+  _isAdLoaded: 0
+  rVShownTime: 0
+  appOpenTimeDelay: 30
+  isAppOpenShowing: 0
+  isApOpenLoaded: 0
+  interstitialPlacement: level_up
+  isInterstitialLoaded: 0
+  isAdShowing: 0
 --- !u!1 &1706177325
 GameObject:
   m_ObjectHideFlags: 0

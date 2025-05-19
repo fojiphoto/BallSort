@@ -167,12 +167,12 @@ public class GameGraphic : MonoBehaviour
 
     public void AddNewBottleReward()
     {
-        if (Application.internetReachability == NetworkReachability.NotReachable)
-        {
-            //UIManager.Instance.ShowNoInternetPopUp();
-            Debug.Log("khong co internet");
-            return;
-        }
+        //if (Application.internetReachability == NetworkReachability.NotReachable)
+        //{
+        //    //UIManager.Instance.ShowNoInternetPopUp();
+        //    Debug.Log("khong co internet");
+        //    return;
+        //}
 
         //AdManager.instance.ShowReward(() =>
         //{
@@ -186,7 +186,8 @@ public class GameGraphic : MonoBehaviour
 
         //}, "YourPlacementID");
         //Nadeem Ads BallSort
-        AddNewBottle();
+        AdsManager.instance.ShowRewardedAd(AddNewBottle);
+        //AddNewBottle();
     }
 
     private void PositionBottles()

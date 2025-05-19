@@ -95,6 +95,7 @@ public class BallSortColorGame : MonoBehaviour
 
     public void OnWin()
     {
+        AdsManager.instance.ShowInterstitialWithoutConditions("");
         graphic.SetUndoUiState(false);
         graphic.hasMovedBall = false;
         graphic.freeUndoCount = 1;
