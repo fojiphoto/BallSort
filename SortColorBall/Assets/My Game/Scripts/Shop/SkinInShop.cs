@@ -75,12 +75,12 @@ public class SkinInShop : MonoBehaviour
             OnButtonPress();
             return;
         }
-        if (Application.internetReachability == NetworkReachability.NotReachable)
-        {
-            UIMenu.Instance.ShowNoInternetPopUp(true);
-            Debug.Log("khong co internet");
-            return;
-        }
+        //if (Application.internetReachability == NetworkReachability.NotReachable)
+        //{
+        //    UIMenu.Instance.ShowNoInternetPopUp(true);
+        //    Debug.Log("khong co internet");
+        //    return;
+        //}
         //Nadeem Ads BallSort
         //AdManager.instance.ShowReward(() =>
         //{
@@ -93,8 +93,8 @@ public class SkinInShop : MonoBehaviour
 
 
         //}, "YourPlacementID");
-
-        OnButtonPress();
+        AdsManager.instance.ShowRewardedAd(OnButtonPress);
+        //OnButtonPress();
     }
 
     public void IsSkinUnlocked()

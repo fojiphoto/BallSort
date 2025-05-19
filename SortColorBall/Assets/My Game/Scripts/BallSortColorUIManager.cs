@@ -99,6 +99,7 @@ public class BallSortColorUIManager : MonoBehaviour
 
     public IEnumerator ShowWin()
     {
+        AdsManager.instance.HideBanner();
         yield return new WaitForSeconds(0.5f);
         Instantiate(effectLevelComplete);
 
@@ -112,6 +113,7 @@ public class BallSortColorUIManager : MonoBehaviour
         BallSortColorAudioController.Instance.PlaySound(BallSortColorAudioController.Instance.clickBtn);
 
         WinPopUp.SetActive(false);
+        AdsManager.instance.ShowBanner();
 
     }
 

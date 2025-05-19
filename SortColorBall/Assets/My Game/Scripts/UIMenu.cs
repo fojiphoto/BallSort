@@ -2,7 +2,9 @@
 using UnityEngine.SceneManagement;
 using TMPro;
 using DG.Tweening;
+#if UNITY_EDITOR
 using static UnityEditor.Progress;
+#endif
 using System.Collections.Generic;
 using System.Collections;
 
@@ -33,6 +35,7 @@ public class UIMenu : MonoBehaviour
 
     private void Start()
     {
+        AdsManager.instance.ShowBanner();
         UpdateLevelText(DataManager.Instance.GetLevel());
         //Nadeem Ads BallSort
         // AdManager.instance.ShowBanner();
