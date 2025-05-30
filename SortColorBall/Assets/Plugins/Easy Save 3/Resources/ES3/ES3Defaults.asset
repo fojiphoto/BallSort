@@ -32,7 +32,7 @@ MonoBehaviour:
     assemblyNames:
     - Assembly-CSharp
     - Assembly-CSharp-firstpass
-    - MaxSdk.Scripts
+    - GamePix
     - Sirenix.OdinInspector.CompatibilityLayer
     - Unity.PlayerPrefsEditor.Samples.SampleScene
     showAdvancedSettings: 0

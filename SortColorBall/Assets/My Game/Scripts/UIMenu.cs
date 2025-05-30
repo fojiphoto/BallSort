@@ -35,7 +35,7 @@ public class UIMenu : MonoBehaviour
 
     private void Start()
     {
-        AdsManager.instance.ShowBanner();
+        //AdsManager.instance.ShowBanner();
         UpdateLevelText(DataManager.Instance.GetLevel());
         //Nadeem Ads BallSort
         // AdManager.instance.ShowBanner();
