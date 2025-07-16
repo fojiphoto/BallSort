@@ -45,6 +45,6 @@ public class SabloGDPRSmart : MonoBehaviour
     
     public void OpenPrivacyLink()
     {
-        Application.OpenURL("https://cbgprivacypolicy.blogspot.com/2023/02/privacy-policy.html");
+        Application.OpenURL("https://zvconcepts.com/privacy-policy/");
     }
 }
