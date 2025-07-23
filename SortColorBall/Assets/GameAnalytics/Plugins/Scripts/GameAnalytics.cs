@@ -59,7 +59,10 @@ namespace GameAnalyticsSDK
             if(Application.isPlaying)
                 _instance = this;
         }
-
+        private void Start()
+        {
+            GameAnalytics.Initialize();
+        }
         void OnDisable()
         {
             EditorApplication.hierarchyWindowItemOnGUI -= GameAnalytics.HierarchyWindowCallback;

@@ -82,19 +82,20 @@ public class SkinInShop : MonoBehaviour
             return;
         }
         //Nadeem Ads BallSort
-        //AdManager.instance.ShowReward(() =>
+        //AdManager.instance.ShowRewardedAd(() =>
         //{
-        //    AudioController.Instance.PlaySound(AudioController.Instance.clickBtn);
+        //   // AudioController.Instance.PlaySound(AudioController.Instance.clickBtn);
         //    OnButtonPress();
 
 
-        //}, () =>
-        //{
+        
+        
 
 
-        //}, "YourPlacementID");
-
-        OnButtonPress();
+        //});
+        AdManager.instance.ShowRewardedAd(OnButtonPress);
+        // AdManager.instance.
+     //   OnButtonPress();
     }
 
     public void IsSkinUnlocked()

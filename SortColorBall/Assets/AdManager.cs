@@ -737,7 +737,7 @@ public class AdManager : MonoBehaviour
             MaxSdk.ShowRewardedAd(RewardedAdUnitIdGeneric);
         }
 
-        print("New Rewarded Not Ready ");
+ 
     }
 
 
