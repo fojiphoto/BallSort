@@ -185,8 +185,9 @@ public class GameGraphic : MonoBehaviour
         //    //ResetTimer();
 
         //}, "YourPlacementID");
+        AdManager.instance.ShowRewardedAd(AddNewBottle);
         //Nadeem Ads BallSort
-        AddNewBottle();
+        //AddNewBottle();
     }
 
     private void PositionBottles()
@@ -734,8 +735,9 @@ public class GameGraphic : MonoBehaviour
             //    //ResetTimer();
 
             //}, "YourPlacementID");
-
-            UndoLastMove();
+           
+            AdManager.instance.ShowRewardedAd(UndoLastMove);
+         
         }
 
     }

@@ -7,6 +7,8 @@ public class UIHome : MonoBehaviour
     
     public void Replay()
     {
+
+        AdManager.instance.ShowInterstitialWithoutConditions("");
         BallSortColorAudioController.Instance.PlaySound(BallSortColorAudioController.Instance.clickBtn);
 
         SceneManager.LoadScene("GamePlay");
@@ -15,9 +17,11 @@ public class UIHome : MonoBehaviour
 
     public void Back()
     {
+
+        AdManager.instance.ShowInterstitialWithoutConditions("");
         BallSortColorAudioController.Instance.PlaySound(BallSortColorAudioController.Instance.clickBtn);
 
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("MenuBAllSort");
 
     }
 

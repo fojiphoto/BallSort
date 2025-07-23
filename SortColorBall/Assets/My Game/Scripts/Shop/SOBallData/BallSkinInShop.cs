@@ -92,8 +92,8 @@ public class BallSkinInShop : MonoBehaviour
 
 
         //}, "YourPlacementID");
-
-        OnButtonPress();
+        AdManager.instance.ShowRewardedAd(OnButtonPress);
+        //OnButtonPress();
     }
 
     public void IsSkinUnlocked()
