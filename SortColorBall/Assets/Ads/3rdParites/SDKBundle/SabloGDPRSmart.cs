@@ -45,6 +45,6 @@ public class SabloGDPRSmart : MonoBehaviour
     
     public void OpenPrivacyLink()
     {
-        Application.OpenURL("https://orbitgamesglobal-privacy-policy.blogspot.com/");
+        Application.OpenURL("https://akglobalgames-privacy-policy.blogspot.com/2022/10/ak-global-games-privacy-policy.html");
     }
 }

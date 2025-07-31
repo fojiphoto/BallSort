@@ -1382,11 +1382,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 963c238440881a347b971e9a6a5b5b6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InterstitialAdUnitIdGeneric: 0f8c358aa8e4c014
-  RewardedAdUnitIdGeneric: c3adb94ea70c4306
-  BannerAdUnitId: 5f38143c5369de4d
+  InterstitialAdUnitIdGeneric: cdaa619689a560d3
+  RewardedAdUnitIdGeneric: dd24334c233f1975
+  BannerAdUnitId: 620c97f18acc1f4a
   AppOpenAdUnitId: 
-  RecID: 220fad706788b855
+  RecID: f992749472bb9e76
   isBannerShowing: 0
   _isAdLoaded: 0
   rVShownTime: 0
