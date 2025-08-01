@@ -45,6 +45,6 @@ public class SabloGDPRSmart : MonoBehaviour
     
     public void OpenPrivacyLink()
     {
-        Application.OpenURL("https://topnation-studio-privacy-policy.blogspot.com/2025/03/topnation-studio-private-limited.html");
+        Application.OpenURL("https://alphazin-privacy-policy.blogspot.com/2025/03/alphazin-games-private-limited.html");
     }
 }
