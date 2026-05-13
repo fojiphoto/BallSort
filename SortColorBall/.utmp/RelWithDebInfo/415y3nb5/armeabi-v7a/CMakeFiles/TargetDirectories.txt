@@ -1,0 +1,5 @@
+F:/PlayableAdsTestingProject/BallSort/SortColorBall/.utmp/RelWithDebInfo/415y3nb5/armeabi-v7a/CMakeFiles/edit_cache.dir
+F:/PlayableAdsTestingProject/BallSort/SortColorBall/.utmp/RelWithDebInfo/415y3nb5/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+F:/PlayableAdsTestingProject/BallSort/SortColorBall/.utmp/RelWithDebInfo/415y3nb5/armeabi-v7a/FramePacing/CMakeFiles/swappywrapper.dir
+F:/PlayableAdsTestingProject/BallSort/SortColorBall/.utmp/RelWithDebInfo/415y3nb5/armeabi-v7a/FramePacing/CMakeFiles/edit_cache.dir
+F:/PlayableAdsTestingProject/BallSort/SortColorBall/.utmp/RelWithDebInfo/415y3nb5/armeabi-v7a/FramePacing/CMakeFiles/rebuild_cache.dir

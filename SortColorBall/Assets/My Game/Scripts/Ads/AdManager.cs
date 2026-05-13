@@ -110,7 +110,7 @@ public class AdManager : MonoBehaviour
         AdManager.PauseGame();
         complete += () =>
         {
-            AdManager.Resume();
+           // AdManager.Resume();
          
             //UIController.i.TriggerWhenShowAds();
             Invoke(nameof(DelayOpenAds), 0.5f);
@@ -118,7 +118,7 @@ public class AdManager : MonoBehaviour
         };
         fail += () =>
         {
-            AdManager.Resume();
+            //AdManager.Resume();
             Time.timeScale = 1f;
             //UIController.i.TriggerWhenShowAds();
             Invoke(nameof(DelayOpenAds), 0.5f);

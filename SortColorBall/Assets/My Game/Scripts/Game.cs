@@ -21,6 +21,7 @@ public class Game : MonoBehaviour
     private void Start()
     {
         UIManager.Instance.UpdateLevelText(DataManager.Instance.GetLevel());
+        Time.timeScale = 1f;
     }
 
     public void LoadLevel(List<int[]> listArray)
@@ -126,12 +127,12 @@ public class Game : MonoBehaviour
         {
             AdManager.instance.ShowInter(() =>
             {
-                AdsController.Instance.ResetTime();
+                //AdsController.Instance.ResetTime();
 
             },
             () =>
             {
-                AdsController.Instance.ResetTime();
+               // AdsController.Instance.ResetTime();
 
 
             }, "Null");
