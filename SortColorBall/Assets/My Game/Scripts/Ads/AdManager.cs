@@ -10,7 +10,7 @@ using DG.Tweening;
 public class AdManager : MonoBehaviour
 {
     public static AdManager instance { get; set; }
-    private AdmobManager mediation;
+    //private AdmobManager mediation;
     public float DefaultTimeInter;
     bool canShowOpenAd = true;
     private void Awake()
@@ -27,17 +27,17 @@ public class AdManager : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        mediation = GetComponent<AdmobManager>();
+        //mediation = GetComponent<AdmobManager>();
     }
     /*public Image loadingFill;*/
     private void Start()
     {
 
         // Create a ConsentRequestParameters object.
-        GoogleMobileAds.Ump.Api.ConsentRequestParameters request = new GoogleMobileAds.Ump.Api.ConsentRequestParameters();
+        //GoogleMobileAds.Ump.Api.ConsentRequestParameters request = new GoogleMobileAds.Ump.Api.ConsentRequestParameters();
 
         // Check the current consent information status.
-        GoogleMobileAds.Ump.Api.ConsentInformation.Update(request, OnConsentInfoUpdated);
+        //GoogleMobileAds.Ump.Api.ConsentInformation.Update(request, OnConsentInfoUpdated);
 
 
         Invoke(nameof(StartLoading), 1f);
@@ -61,46 +61,46 @@ public class AdManager : MonoBehaviour
         Time.timeScale = 1f;
         AudioListener.volume = 1;
     }
-    void OnConsentInfoUpdated(GoogleMobileAds.Ump.Api.FormError consentError)
-    {
-        if (consentError != null)
-        {
-            // Handle the error.
-            UnityEngine.Debug.LogError(consentError);
-            Init();
-            return;
-        }
+    //void OnConsentInfoUpdated(GoogleMobileAds.Ump.Api.FormError consentError)
+    //{
+    //    if (consentError != null)
+    //    {
+    //        // Handle the error.
+    //        UnityEngine.Debug.LogError(consentError);
+    //        Init();
+    //        return;
+    //    }
 
-        // If the error is null, the consent information state was updated.
-        // You are now ready to check if a form is available.
-        GoogleMobileAds.Ump.Api.ConsentForm.LoadAndShowConsentFormIfRequired((GoogleMobileAds.Ump.Api.FormError formError) =>
-        {
-            if (formError != null)
-            {
-                // Consent gathering failed.
-                UnityEngine.Debug.LogError(consentError);
-                Init();
-                return;
-            }
+    //    // If the error is null, the consent information state was updated.
+    //    // You are now ready to check if a form is available.
+    //    GoogleMobileAds.Ump.Api.ConsentForm.LoadAndShowConsentFormIfRequired((GoogleMobileAds.Ump.Api.FormError formError) =>
+    //    {
+    //        if (formError != null)
+    //        {
+    //            // Consent gathering failed.
+    //            UnityEngine.Debug.LogError(consentError);
+    //            Init();
+    //            return;
+    //        }
 
-            // Consent has been gathered.
-            if (GoogleMobileAds.Ump.Api.ConsentInformation.CanRequestAds())
-            {
-                Init();
-            }
-        });
-    }
+    //        // Consent has been gathered.
+    //        if (GoogleMobileAds.Ump.Api.ConsentInformation.CanRequestAds())
+    //        {
+    //            Init();
+    //        }
+    //    });
+    //}
 
 
     public void Init()
     {
-        mediation.Init();
+        //mediation.Init();
         Invoke(nameof(ShowOpen), 3f);
     }
     public void ShowOpen()
     {
-        if (PlayerPrefs.GetInt("RemoveAds", 0) == 0)
-            mediation.ShowOpenAd();
+        if (PlayerPrefs.GetInt("RemoveAds", 0) == 0) ;
+           // mediation.ShowOpenAd();
        // if(!Application.isEditor)
         //InAppUpdate.getInstance();
     }
@@ -124,8 +124,8 @@ public class AdManager : MonoBehaviour
             Invoke(nameof(DelayOpenAds), 0.5f);
         };
 
-        if (PlayerPrefs.GetInt("RemoveAds", 0) == 0)
-            mediation.ShowInterstitialAd(complete, fail, placement);
+        if (PlayerPrefs.GetInt("RemoveAds", 0) == 0) ;
+            //mediation.ShowInterstitialAd(complete, fail, placement);
     }
     public void ShowReward(Action complete, Action fail, string placement)
     {
@@ -149,16 +149,16 @@ public class AdManager : MonoBehaviour
             // UIController.i.TriggerWhenShowAds();
             Invoke(nameof(DelayOpenAds), 0.5f);
         };
-        mediation.ShowRewardedAd(complete, fail, placement);
+        //mediation.ShowRewardedAd(complete, fail, placement);
     }
     public void ShowBanner()
     {
-        if (PlayerPrefs.GetInt("RemoveAds", 0) == 0)
-            mediation.LoadBanner();
+        if (PlayerPrefs.GetInt("RemoveAds", 0) == 0) ;
+           // mediation.LoadBanner();
     }
     public void HideBanner()
     {
-        mediation.HideBanner();
+        //mediation.HideBanner();
     }
     private void DelayOpenAds() => canShowOpenAd = true;
 
