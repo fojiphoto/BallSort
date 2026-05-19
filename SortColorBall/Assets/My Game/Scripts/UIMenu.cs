@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 using DG.Tweening;
 //using static UnityEditor.Progress;
 using System.Collections.Generic;
@@ -23,7 +24,7 @@ public class UIMenu : MonoBehaviour
     
 
 
-    public TMP_Text levelTxt;
+    public Text levelTxt;
 
     public static UIMenu Instance;
     private void Awake()

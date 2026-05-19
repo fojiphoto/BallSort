@@ -10,6 +10,9 @@ public class SettingPopUp : MonoBehaviour
     [SerializeField] private GameObject _sfxOnBtn;
     [SerializeField] private GameObject _sfxOffBtn;
 
+    [SerializeField] private GameObject _vibrationOnBtn;
+    [SerializeField] private GameObject _vibrationOffBtn;
+
     [SerializeField] private GameObject board;
     private bool isConfirming = false; // Flag to track if the button was already clicked
     private void Awake()
@@ -87,7 +90,31 @@ public class SettingPopUp : MonoBehaviour
         SaveButtonStates();
     }
 
-    
+    public void ToggleVibrationOn()
+    {
+        _vibrationOnBtn.SetActive(false);
+        _vibrationOffBtn.SetActive(true);
+
+        AudioController.Instance.PlaySound(AudioController.Instance.clickBtn);
+
+        AudioController.Instance.ToggleVibration();
+
+        SaveButtonStates();
+    }
+
+    public void ToggleVibrationOff()
+    {
+        _vibrationOnBtn.SetActive(true);
+        _vibrationOffBtn.SetActive(false);
+
+        AudioController.Instance.PlaySound(AudioController.Instance.clickBtn);
+
+        AudioController.Instance.ToggleVibration();
+
+        SaveButtonStates();
+    }
+
+
 
     private void SaveButtonStates()
     {
@@ -95,6 +122,8 @@ public class SettingPopUp : MonoBehaviour
         PlayerPrefs.SetInt("MusicOffBtnActive", _musicOffBtn.activeSelf ? 1 : 0);
         PlayerPrefs.SetInt("SfxOnBtnActive", _sfxOnBtn.activeSelf ? 1 : 0);
         PlayerPrefs.SetInt("SfxOffBtnActive", _sfxOffBtn.activeSelf ? 1 : 0);
+        PlayerPrefs.SetInt("VibrationOnBtnActive", _sfxOffBtn.activeSelf ? 1 : 0);
+        PlayerPrefs.SetInt("VibrationOffBtnActive", _sfxOffBtn.activeSelf ? 1 : 0);
         PlayerPrefs.Save();
     }
 
@@ -104,5 +133,7 @@ public class SettingPopUp : MonoBehaviour
         _musicOffBtn.SetActive(PlayerPrefs.GetInt("MusicOffBtnActive", 0) == 1);
         _sfxOnBtn.SetActive(PlayerPrefs.GetInt("SfxOnBtnActive", 1) == 1);
         _sfxOffBtn.SetActive(PlayerPrefs.GetInt("SfxOffBtnActive", 0) == 1);
+        _vibrationOnBtn.SetActive(PlayerPrefs.GetInt("SfxOnBtnActive", 0) == 1);
+        _vibrationOffBtn.SetActive(PlayerPrefs.GetInt("SfxOffBtnActive", 0) == 1);
     }
 }

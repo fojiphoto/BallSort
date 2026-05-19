@@ -13,6 +13,9 @@ public class AudioController : MonoBehaviour
     [Range(0, 1)]
     public float sfxVolume = 1f;
 
+    [Header("Vibration Settings:")]
+    public bool vibrationEnabled = true;
+
     public AudioSource musicAus;
     public AudioSource sfxAus;
 
@@ -122,6 +125,18 @@ public class AudioController : MonoBehaviour
         }
     }
 
+
+    public void Vibrate()
+    {
+        if (!vibrationEnabled) return;
+
+#if UNITY_ANDROID || UNITY_IOS
+        Handheld.Vibrate();
+#endif
+    }
+
+
+
     /// <summary>
     /// Set volume for audiosource
     /// </summary>
@@ -173,10 +188,22 @@ public class AudioController : MonoBehaviour
         PlayerPrefs.Save();
     }
 
+    public void ToggleVibration()
+    {
+        vibrationEnabled = !vibrationEnabled;
+
+        PlayerPrefs.SetInt("VibrationEnabled", vibrationEnabled ? 1 : 0);
+        PlayerPrefs.Save();
+    }
+
+
     private void LoadAudioSettings()
     {
         musicAus.mute = PlayerPrefs.GetInt("MusicMuted", 0) == 1;
         sfxAus.mute = PlayerPrefs.GetInt("SFXMuted", 0) == 1;
+
+        vibrationEnabled = PlayerPrefs.GetInt("VibrationEnabled", 1) == 1;
+
     }
 
 

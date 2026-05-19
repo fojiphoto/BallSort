@@ -8,9 +8,12 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
     public GameObject WinPopUp;
+    public GameObject settingPanel;
+    public GameObject settingsBoard;
+
     public GameObject effectLevelComplete;
     public Image adsImg;
-    public TMP_Text levelTxt;
+    public Text levelTxt;
 
     public GameObject guideSelectBall;
     public GameObject guideMoveBall;
@@ -48,6 +51,15 @@ public class UIManager : MonoBehaviour
 
             GuideOff();
         }
+    }
+
+
+    public void ShowSettingPopup()
+    {
+        AudioController.Instance.PlaySound(AudioController.Instance.openPopup);
+        settingPanel.SetActive(true);
+        settingsBoard.SetActive(true);
+
     }
 
 

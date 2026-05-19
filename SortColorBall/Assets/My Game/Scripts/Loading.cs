@@ -10,7 +10,7 @@ public class Loading : MonoBehaviour
     public float TimeDuration;
 
     public event Action OnLoadingUpdate;
-    [SerializeField] private TMP_Text _textLoading;
+    [SerializeField] private Text _textLoading;
 
     private void Awake()
     {
