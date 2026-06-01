@@ -38,7 +38,12 @@ namespace EasyUI.Tabs {
       private int tabBtnsNum, tabContentNum ;
 
 
-      private void Start () {
+        
+
+      public ScrollRect scrollRect;
+
+
+    private void Start () {
          GetTabBtns () ;
       }
 
@@ -74,6 +79,9 @@ namespace EasyUI.Tabs {
 
          tabBtns [ 0 ].uiButton.interactable = false ;
          tabContent [ 0 ].SetActive (true) ;
+
+            scrollRect = FindAnyObjectByType<ScrollRect>();
+            scrollRect.content = tabContent[0].GetComponent<RectTransform>();
       }
 
       public void OnTabButtonClicked (int tabIndex) {
@@ -86,6 +94,8 @@ namespace EasyUI.Tabs {
 
             tabContent [ previous ].SetActive (false) ;
             tabContent [ current ].SetActive (true) ;
+
+            scrollRect.content = tabContent[current].GetComponent<RectTransform>();
 
             tabBtns [ previous ].uiImage.color = tabColorInactive ;
             tabBtns [ current ].uiImage.color = tabColorActive ;

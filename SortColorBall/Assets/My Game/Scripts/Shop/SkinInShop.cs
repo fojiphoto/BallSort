@@ -19,6 +19,8 @@ public class SkinInShop : MonoBehaviour
 
     public TMP_Text buttonText;
 
+    public GameObject itemSelected;
+
 
     //public Button buyBtn;
 
@@ -50,7 +52,7 @@ public class SkinInShop : MonoBehaviour
             SkinManager.Instance.EquipSkin(this);
             AudioController.Instance.PlaySound(AudioController.Instance.clickBtn);
 
-            //itemSelected.SetActive(true);
+            itemSelected.SetActive(true);
 
         }
         else

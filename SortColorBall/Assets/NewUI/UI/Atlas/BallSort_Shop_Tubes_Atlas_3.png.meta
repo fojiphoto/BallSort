@@ -1,0 +1,819 @@
+fileFormatVersion: 2
+guid: aed45c8a2c662504cb972c3fed2ee9e6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1626098922744096272
+    second: BallSort_Sjop_Tubes_Atlas_3_0
+  - first:
+      213: 1342975285361770685
+    second: BallSort_Sjop_Tubes_Atlas_3_1
+  - first:
+      213: -3584268148782528009
+    second: BallSort_Sjop_Tubes_Atlas_3_2
+  - first:
+      213: -7529189660918760119
+    second: BallSort_Sjop_Tubes_Atlas_3_3
+  - first:
+      213: 5632024996866071217
+    second: BallSort_Sjop_Tubes_Atlas_3_4
+  - first:
+      213: -393870822038645716
+    second: BallSort_Sjop_Tubes_Atlas_3_5
+  - first:
+      213: 2404350327988809230
+    second: BallSort_Sjop_Tubes_Atlas_3_6
+  - first:
+      213: 5785748399119230715
+    second: BallSort_Sjop_Tubes_Atlas_3_7
+  - first:
+      213: 3395066120212337859
+    second: BallSort_Sjop_Tubes_Atlas_3_8
+  - first:
+      213: 2029056336459653996
+    second: BallSort_Sjop_Tubes_Atlas_3_9
+  - first:
+      213: 6603021940183538989
+    second: BallSort_Sjop_Tubes_Atlas_3_10
+  - first:
+      213: 4846068763136405333
+    second: BallSort_Sjop_Tubes_Atlas_3_11
+  - first:
+      213: -7784641308775539911
+    second: BallSort_Sjop_Tubes_Atlas_3_12
+  - first:
+      213: -6149014619171611776
+    second: BallSort_Sjop_Tubes_Atlas_3_13
+  - first:
+      213: 4036316743795020585
+    second: BallSort_Sjop_Tubes_Atlas_3_14
+  - first:
+      213: -8230300763013405664
+    second: BallSort_Sjop_Tubes_Atlas_3_15
+  - first:
+      213: -4440654108385139617
+    second: BallSort_Sjop_Tubes_Atlas_3_16
+  - first:
+      213: -4391172607886239493
+    second: BallSort_Sjop_Tubes_Atlas_3_17
+  - first:
+      213: -7458074789591868609
+    second: BallSort_Sjop_Tubes_Atlas_3_18
+  - first:
+      213: 4937779942571425839
+    second: BallSort_Sjop_Tubes_Atlas_3_19
+  - first:
+      213: 1970496610773498928
+    second: BallSort_Sjop_Tubes_Atlas_3_20
+  - first:
+      213: -8453646686419296620
+    second: BallSort_Sjop_Tubes_Atlas_3_21
+  - first:
+      213: -5102236546322526855
+    second: BallSort_Sjop_Tubes_Atlas_3_22
+  - first:
+      213: 6781111460151321272
+    second: BallSort_Sjop_Tubes_Atlas_3_23
+  - first:
+      213: 5035951922649294466
+    second: BallSort_Sjop_Tubes_Atlas_3_24
+  - first:
+      213: -7571524856627616971
+    second: BallSort_Sjop_Tubes_Atlas_3_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BallSort_Sjop_Tubes_Atlas_3_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1716
+        width: 318
+        height: 319
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 016aec3da50119610800000000000000
+      internalID: 1626098922744096272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BallSort_Sjop_Tubes_Atlas_3_1
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 1716
+        width: 318
+        height: 319
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db00e1a18e433a210800000000000000
+      internalID: 1342975285361770685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BallSort_Sjop_Tubes_Atlas_3_2
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 1716
+        width: 318
+        height: 319
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f90214eb1f124ec0800000000000000
+      internalID: -3584268148782528009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BallSort_Sjop_Tubes_Atlas_3_3
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 1716
+        width: 318
+        height: 319
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94db46e05e1f28790800000000000000
+      internalID: -7529189660918760119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BallSort_Sjop_Tubes_Atlas_3_4
+      rect:
+        serializedVersion: 2
+        x: 1363
+        y: 1716
+        width: 318
+        height: 319
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ba925815e8f82e40800000000000000
+      internalID: 5632024996866071217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BallSort_Sjop_Tubes_Atlas_3_5
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 1716
+        width: 318
+        height: 319
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c24defcf290b88af0800000000000000
+      internalID: -393870822038645716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BallSort_Sjop_Tubes_Atlas_3_6
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1385
+        width: 318
+        height: 319
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0eed5f62e7fd5120800000000000000
+      internalID: 2404350327988809230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BallSort_Sjop_Tubes_Atlas_3_7
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 1385
+        width: 318
+        height: 319
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf66949c38b1b4050800000000000000
+      internalID: 5785748399119230715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BallSort_Sjop_Tubes_Atlas_3_8
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 1385
+        width: 318
+        height: 319
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c4583406a2bd1f20800000000000000
+      internalID: 3395066120212337859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BallSort_Sjop_Tubes_Atlas_3_9
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 1385
+        width: 318
+        height: 319
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c63eee3dcf7a82c10800000000000000
+      internalID: 2029056336459653996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BallSort_Sjop_Tubes_Atlas_3_10
+      rect:
+        serializedVersion: 2
+        x: 1363
+        y: 1385
+        width: 318
+        height: 319
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2d10c46875a2ab50800000000000000
+      internalID: 6603021940183538989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BallSort_Sjop_Tubes_Atlas_3_11
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 1385
+        width: 318
+        height: 319
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55facdf4dd1b04340800000000000000
+      internalID: 4846068763136405333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BallSort_Sjop_Tubes_Atlas_3_12
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1055
+        width: 318
+        height: 319
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93b1a9679f567f390800000000000000
+      internalID: -7784641308775539911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BallSort_Sjop_Tubes_Atlas_3_13
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 1055
+        width: 314
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08b979168cf4aaaa0800000000000000
+      internalID: -6149014619171611776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BallSort_Sjop_Tubes_Atlas_3_14
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 1054
+        width: 314
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9231dd271b0e30830800000000000000
+      internalID: 4036316743795020585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BallSort_Sjop_Tubes_Atlas_3_15
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 1055
+        width: 314
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 024a5f1ef0918cd80800000000000000
+      internalID: -8230300763013405664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BallSort_Sjop_Tubes_Atlas_3_16
+      rect:
+        serializedVersion: 2
+        x: 1345
+        y: 1055
+        width: 314
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f542353bd90af52c0800000000000000
+      internalID: -4440654108385139617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BallSort_Sjop_Tubes_Atlas_3_17
+      rect:
+        serializedVersion: 2
+        x: 1673
+        y: 1055
+        width: 314
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf8d38f47cb6f03c0800000000000000
+      internalID: -4391172607886239493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BallSort_Sjop_Tubes_Atlas_3_18
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 720
+        width: 314
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3b94125e789f7890800000000000000
+      internalID: -7458074789591868609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BallSort_Sjop_Tubes_Atlas_3_19
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 720
+        width: 314
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f20c40042b4868440800000000000000
+      internalID: 4937779942571425839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BallSort_Sjop_Tubes_Atlas_3_20
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 720
+        width: 314
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03cf3443a3c985b10800000000000000
+      internalID: 1970496610773498928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BallSort_Sjop_Tubes_Atlas_3_21
+      rect:
+        serializedVersion: 2
+        x: 1006
+        y: 720
+        width: 314
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49ed157c02d9eaa80800000000000000
+      internalID: -8453646686419296620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BallSort_Sjop_Tubes_Atlas_3_22
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 720
+        width: 314
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97d0e68d4e63139b0800000000000000
+      internalID: -5102236546322526855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BallSort_Sjop_Tubes_Atlas_3_23
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 723
+        width: 314
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b266a4f1f85b1e50800000000000000
+      internalID: 6781111460151321272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BallSort_Sjop_Tubes_Atlas_3_24
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 390
+        width: 314
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 286e47f879b43e540800000000000000
+      internalID: 5035951922649294466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BallSort_Sjop_Tubes_Atlas_3_25
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 390
+        width: 314
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 533aba0324a8ce690800000000000000
+      internalID: -7571524856627616971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      BallSort_Sjop_Tubes_Atlas_3_0: 1626098922744096272
+      BallSort_Sjop_Tubes_Atlas_3_1: 1342975285361770685
+      BallSort_Sjop_Tubes_Atlas_3_10: 6603021940183538989
+      BallSort_Sjop_Tubes_Atlas_3_11: 4846068763136405333
+      BallSort_Sjop_Tubes_Atlas_3_12: -7784641308775539911
+      BallSort_Sjop_Tubes_Atlas_3_13: -6149014619171611776
+      BallSort_Sjop_Tubes_Atlas_3_14: 4036316743795020585
+      BallSort_Sjop_Tubes_Atlas_3_15: -8230300763013405664
+      BallSort_Sjop_Tubes_Atlas_3_16: -4440654108385139617
+      BallSort_Sjop_Tubes_Atlas_3_17: -4391172607886239493
+      BallSort_Sjop_Tubes_Atlas_3_18: -7458074789591868609
+      BallSort_Sjop_Tubes_Atlas_3_19: 4937779942571425839
+      BallSort_Sjop_Tubes_Atlas_3_2: -3584268148782528009
+      BallSort_Sjop_Tubes_Atlas_3_20: 1970496610773498928
+      BallSort_Sjop_Tubes_Atlas_3_21: -8453646686419296620
+      BallSort_Sjop_Tubes_Atlas_3_22: -5102236546322526855
+      BallSort_Sjop_Tubes_Atlas_3_23: 6781111460151321272
+      BallSort_Sjop_Tubes_Atlas_3_24: 5035951922649294466
+      BallSort_Sjop_Tubes_Atlas_3_25: -7571524856627616971
+      BallSort_Sjop_Tubes_Atlas_3_3: -7529189660918760119
+      BallSort_Sjop_Tubes_Atlas_3_4: 5632024996866071217
+      BallSort_Sjop_Tubes_Atlas_3_5: -393870822038645716
+      BallSort_Sjop_Tubes_Atlas_3_6: 2404350327988809230
+      BallSort_Sjop_Tubes_Atlas_3_7: 5785748399119230715
+      BallSort_Sjop_Tubes_Atlas_3_8: 3395066120212337859
+      BallSort_Sjop_Tubes_Atlas_3_9: 2029056336459653996
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
