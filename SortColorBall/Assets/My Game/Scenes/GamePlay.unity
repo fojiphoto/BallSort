@@ -7391,6 +7391,7 @@ MonoBehaviour:
   supBottleButton: {fileID: 1405179923}
   supCanvasGroup: {fileID: 1405179920}
   mainCamera: {fileID: 519420031}
+  fullBottleEffect: {fileID: 165244, guid: d255b374d8bcfbe46b1c6b37473b5663, type: 3}
 --- !u!114 &1091792605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8087,7 +8088,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1157401405
 RectTransform:
   m_ObjectHideFlags: 0

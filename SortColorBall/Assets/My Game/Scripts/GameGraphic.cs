@@ -448,6 +448,32 @@ public class GameGraphic : MonoBehaviour
         Destroy(ballObject.gameObject);
         bottleGraphics[command.toBottleIndex].SetGraphic(command.toBallIndex, command.type);
 
+
+
+        List<Game.Ball> ballList = game.bottles[command.toBottleIndex].balls;
+
+        if (command.toBallIndex == 3)
+        {
+            bool completed = true;
+
+            for (int i = 1; i < ballList.Count; i++)
+            {
+                if (ballList[i].type != ballList[0].type)
+                {
+                    completed = false;
+                    break;
+                }
+            }
+
+            if (completed)
+            {
+                Debug.Log("Bottle Completed!");
+                Instantiate(fullBottleEffect, Vector3.zero, Quaternion.identity);
+            }
+        }
+
+
+
         // Check if the destination bottle now contains 4 balls of the same color
 
 
@@ -459,6 +485,8 @@ public class GameGraphic : MonoBehaviour
 
         pendingBalls--;
     }
+
+    [SerializeField] GameObject fullBottleEffect;
 
     private IEnumerator SwtichBallCoroutine(int fromBottleIndex, int toBottleIndex)
     {
