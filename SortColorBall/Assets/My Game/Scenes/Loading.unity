@@ -614,7 +614,6 @@ MonoBehaviour:
   isFrom: 0
   isIndependentUpdate: 0
   autoKill: 1
-  autoGenerate: 1
   isActive: 1
   isValid: 1
   target: {fileID: 692966121}
@@ -636,12 +635,10 @@ MonoBehaviour:
     height: 0
   endValueTransform: {fileID: 0}
   optionalBool0: 0
-  optionalBool1: 0
   optionalFloat0: 0
   optionalInt0: 0
   optionalRotationMode: 0
   optionalScrambleMode: 0
-  optionalShakeRandomnessMode: 0
   optionalString: 
 --- !u!114 &692966123
 MonoBehaviour:
@@ -734,7 +731,6 @@ MonoBehaviour:
   isFrom: 1
   isIndependentUpdate: 0
   autoKill: 1
-  autoGenerate: 1
   isActive: 1
   isValid: 1
   target: {fileID: 692966121}
@@ -756,12 +752,10 @@ MonoBehaviour:
     height: 0
   endValueTransform: {fileID: 0}
   optionalBool0: 1
-  optionalBool1: 0
   optionalFloat0: 0
   optionalInt0: 0
   optionalRotationMode: 0
   optionalScrambleMode: 0
-  optionalShakeRandomnessMode: 0
   optionalString: 
 --- !u!114 &692966124
 MonoBehaviour:
@@ -995,6 +989,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1498804398}
   - component: {fileID: 1498804399}
+  - component: {fileID: 1498804400}
+  - component: {fileID: 1498804401}
   m_Layer: 0
   m_Name: AdsManager
   m_TagString: Untagged
@@ -1024,12 +1020,50 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1498804396}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee8cfc98cc5f4d7468149f58e48f0cc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   DefaultTimeInter: 0
+--- !u!114 &1498804400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498804396}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 963c238440881a347b971e9a6a5b5b6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  InterstitialAdUnitIdGeneric: a961f53fd249a64d
+  RewardedAdUnitIdGeneric: a070906f7aa9333e
+  BannerAdUnitId: 782ebbb1cc12d23d
+  AppOpenAdUnitId: 
+  RecID: d1064eb9f74fb805
+  isBannerShowing: 0
+  _isAdLoaded: 0
+  rVShownTime: 0
+  appOpenTimeDelay: 30
+  isAppOpenShowing: 0
+  isApOpenLoaded: 0
+  interstitialPlacement: level_up
+  isInterstitialLoaded: 0
+  isAdShowing: 0
+--- !u!114 &1498804401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498804396}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90e808c5a37fe9c4282a2827a8f4c177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::showad
 --- !u!1 &1601235865
 GameObject:
   m_ObjectHideFlags: 0
@@ -1392,7 +1426,6 @@ MonoBehaviour:
   isFrom: 0
   isIndependentUpdate: 0
   autoKill: 1
-  autoGenerate: 1
   isActive: 1
   isValid: 1
   target: {fileID: 496595425320343357}
@@ -1414,12 +1447,10 @@ MonoBehaviour:
     height: 0
   endValueTransform: {fileID: 0}
   optionalBool0: 0
-  optionalBool1: 0
   optionalFloat0: 0
   optionalInt0: 0
   optionalRotationMode: 0
   optionalScrambleMode: 0
-  optionalShakeRandomnessMode: 0
   optionalString: 
 --- !u!224 &827791906091923675
 RectTransform:
@@ -11407,7 +11438,6 @@ MonoBehaviour:
   isFrom: 1
   isIndependentUpdate: 0
   autoKill: 1
-  autoGenerate: 1
   isActive: 1
   isValid: 1
   target: {fileID: 7389424872294738999}
@@ -11429,12 +11459,10 @@ MonoBehaviour:
     height: 0
   endValueTransform: {fileID: 0}
   optionalBool0: 1
-  optionalBool1: 0
   optionalFloat0: 0
   optionalInt0: 0
   optionalRotationMode: 0
   optionalScrambleMode: 0
-  optionalShakeRandomnessMode: 0
   optionalString: 
 --- !u!114 &7389424872294738999
 MonoBehaviour:
