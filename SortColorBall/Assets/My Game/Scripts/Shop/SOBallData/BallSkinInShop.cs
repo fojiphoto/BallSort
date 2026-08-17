@@ -80,17 +80,6 @@ public class BallSkinInShop : MonoBehaviour
             Debug.Log("khong co internet");
             return;
         }
-        AdManager.instance.ShowReward(() =>
-        {
-            AudioController.Instance.PlaySound(AudioController.Instance.clickBtn);
-            OnButtonPress();
-
-
-        }, () =>
-        {
-
-
-        }, "YourPlacementID");
     }
 
     public void IsSkinUnlocked()

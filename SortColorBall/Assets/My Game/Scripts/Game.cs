@@ -110,7 +110,6 @@ public class Game : MonoBehaviour
             graphic.SetSupUiState(false);
 
         }
-        UIManager.Instance.TurnAds(false);
         graphic.CanClick = false;
         //graphic.ClearBottleGraphics();
         int level = DataManager.Instance.GetLevel() + 1;
@@ -123,21 +122,6 @@ public class Game : MonoBehaviour
         UIManager.Instance.NextLevel();
         StartCoroutine(graphic.EnableClickAfterDelay(3.5f));
         BackgroundManager.Instance.ChangeBackground();
-        if (AdsController.Instance.InternAdsTime <= 0)
-        {
-            AdManager.instance.ShowInter(() =>
-            {
-                //AdsController.Instance.ResetTime();
-
-            },
-            () =>
-            {
-               // AdsController.Instance.ResetTime();
-
-
-            }, "Null");
-        }
-
     }
 
 

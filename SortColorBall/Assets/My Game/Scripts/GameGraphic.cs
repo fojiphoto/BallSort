@@ -56,7 +56,6 @@ public class GameGraphic : MonoBehaviour
     {
         Instance = this;
         gameLevelReader = GetComponent<GameLevelReader>();
-        AdManager.instance.ShowBanner();
         idSkin = PlayerPrefs.GetInt("ballskinPref", 0);
 
 
@@ -173,17 +172,6 @@ public class GameGraphic : MonoBehaviour
             Debug.Log("khong co internet");
             return;
         }
-        AdManager.instance.ShowReward(() =>
-        {
-            //AudioController.Instance.PlaySound(AudioController.Instance.clickBtn);
-            AddNewBottle();
-            //ResetTimer();
-
-        }, () =>
-        {
-            //ResetTimer();
-
-        }, "YourPlacementID");
     }
 
     private void PositionBottles()
@@ -736,30 +724,7 @@ public class GameGraphic : MonoBehaviour
 
             freeUndoCount--;
             UndoLastMove();
-            UIManager.Instance.TurnAds(true);
-
         }
-        else
-        {
-            if (Application.internetReachability == NetworkReachability.NotReachable)
-            {
-                //UIManager.Instance.ShowNoInternetPopUp();
-                Debug.Log("showInternet");
-                return;
-            }
-            AdManager.instance.ShowReward(() =>
-            {
-
-                UndoLastMove();
-                //ResetTimer();
-
-            }, () =>
-            {
-                //ResetTimer();
-
-            }, "YourPlacementID");
-        }
-
     }
 
     private IEnumerator UndoMoveCoroutine(MoveCommand moveCommand)

@@ -35,7 +35,6 @@ public class UIMenu : MonoBehaviour
     private void Start()
     {
         UpdateLevelText(DataManager.Instance.GetLevel());
-        AdManager.instance.ShowBanner();
         shopPanel.SetActive(false);
 
     }
